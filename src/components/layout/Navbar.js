@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-export class Navbar extends Component {
+class Navbar extends Component {
+
   static defaultProps = {
-    // title: 'Github Finder',
-    icon: 'fab fa-github',
+    title: 'Default Title',
+    icon: 'fas fa-flag',
   };
 
   static propTypes = {
@@ -16,11 +17,12 @@ export class Navbar extends Component {
     return (
       <nav className='navbar bg-primary'>
         <h1>
-          <i className={this.props.icon} /> {this.props.title}
+          <i className={this.props.icon + ' pr'} /> {this.props.title}
         </h1>
       </nav>
     )
   }
+
 }
 
 export default Navbar
