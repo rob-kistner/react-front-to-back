@@ -1,28 +1,29 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
-class Navbar extends Component {
+// icon & title pulled out via destructuring
+// as props
+//
+const Navbar = ({ icon, title }) => {
 
-  static defaultProps = {
-    title: 'Default Title',
-    icon: 'fas fa-flag',
-  };
-
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-    icon: PropTypes.string.isRequired
-  };
-
-  render() {
-    return (
-      <nav className='navbar bg-primary'>
-        <h1>
-          <i className={this.props.icon + ' pr'} /> {this.props.title}
-        </h1>
-      </nav>
-    )
-  }
+  return (
+    <nav className='navbar bg-primary'>
+      <h1>
+        <i className={icon + ' pr'} /> {title}
+      </h1>
+    </nav>
+  )
 
 }
+
+Navbar.defaultProps = {
+  title: 'Default Title',
+  icon: 'fas fa-flag',
+};
+
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired
+};
 
 export default Navbar
