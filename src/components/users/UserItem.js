@@ -1,17 +1,14 @@
-import React, { Component } from 'react'
+import React, { PropTypes, Component } from 'react'
 
 class UserItem extends Component {
-  // You could put initial state in constructor(),
-  // but you don't need to
-  state = {
-    id: 'id',
-    login: 'mojombo',
-    avatar_url: 'https://avatars0.githubusercontent.com/u/1?v=4',
-    html_url: 'https://github.com/mojombo'
-  };
   
+  static propTypes = {
+    // user: PropTypes.object.isRequired
+  };
+
   render() {
-    const { login, html_url, avatar_url } = this.state;
+
+    const { login, html_url, avatar_url } = this.props.user;
 
     return (
       <div className='card text-center'>
@@ -30,6 +27,7 @@ class UserItem extends Component {
       </div>
     )
   }
+  
 }
 
 export default UserItem
