@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 // the parameter is the destructured user prop
@@ -16,12 +17,11 @@ const UserItem = ({user: { login, html_url, avatar_url }}) => {
         />
       <h3>{login}</h3>
       <div>
-        <a href={html_url}
+        <Link to={`/user/${login}`}
           className="btn btn-dark btn-sm my-1"
-          target="_new"
           >
           More
-        </a>
+        </Link>
       </div>
     </div>
   )
