@@ -5,12 +5,11 @@ import PropTypes from 'prop-types'
 // the parameter is the destructured user prop
 // that's being passed in
 //
-const UserItem = ({user: { login, html_url, avatar_url }}) => {
+const UserItem = ({ user: { login, html_url, avatar_url } }) => {
 
   return (
     <div className='card text-center'>
-      <img
-        src={avatar_url}
+      <img src={avatar_url}
         className="round-img"
         style={{ width: '60px' }}
         alt=''
