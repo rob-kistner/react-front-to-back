@@ -68,7 +68,7 @@ const App = () => {
           <Navbar
             title="Github Finder"
             icon="fab fa-github"
-          />
+            />
           <div className="container">
             <Alert alert={alert} />
             <Switch>
@@ -79,15 +79,13 @@ const App = () => {
                   <>
                     <Search
                       clearUsers={clearUsers}
-                      showClear={
-                        users.length > 0 ? true : false
-                      }
+                      showClear={users.length > 0 ? true : false}
                       setAlert={showAlert}
-                    />
+                      />
                     <Users
                       loading={loading}
                       users={users}
-                    />
+                      />
                   </>
                 )}
               />
@@ -107,7 +105,7 @@ const App = () => {
                     user={user}
                     repos={repos}
                     loading={loading}
-                  />
+                    />
                 )}
               />
             </Switch>

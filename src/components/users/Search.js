@@ -32,12 +32,12 @@ const Search = ({ showClear, clearUsers, setAlert }) => {
           placeholder="Search users"
           value={text}
           onChange={onChange}
-        />
+          />
         <input
           type="submit"
           value="Search"
           className="btn btn-dark btn-block"
-        />
+          />
       </form>
       {// show clear button only if this.props.showClear is true
       showClear && (
